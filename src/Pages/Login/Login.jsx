@@ -1,9 +1,9 @@
 import Header from "../../Components/Header/Header";
 import Button from "../../Components/Buttons/Button";
-//importar os icons de email e cadeado do bootstrap icons
-import { Envelope, Lock } from 'react-bootstrap-icons';
+import Input from "../../Components/Input/Input";
+// import { Envelope, Lock } from 'react-bootstrap-icons';
 
-import "./style.css";
+import "./Login.scss";
 
 function Login() {
 

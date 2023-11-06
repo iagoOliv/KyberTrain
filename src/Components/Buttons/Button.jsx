@@ -1,8 +1,15 @@
 import PropTypes from 'prop-types';
+import { Google, Apple } from 'react-bootstrap-icons';
 import './Button.scss';
 
 const Button = ({ type, buttonText, brand = "" }) => {
-
+    
+    if (brand != "") {
+        brand == "apple"
+            ? <Apple className="button__img"></Apple> 
+            : <Google className="button__img"></Google>
+    }
+    
     const parse = () => {
         switch (type) {
         case 'XL':
@@ -20,7 +27,8 @@ const Button = ({ type, buttonText, brand = "" }) => {
 
     return (
         <a className={"button " + buttonClass + " " + brand }>
-             <span className="button__text">{ buttonText }</span>
+            { brand }
+            <span className="button__text">{ buttonText }</span>
         </a>
     )
 }

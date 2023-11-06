@@ -1,25 +1,34 @@
-const Button = (props) => {
-    let buttonClass = props.type == 'XL' ? "button--xl" : "button--m";
+import PropTypes from 'prop-types';
+import './Button.scss';
 
-    switch (props.type) {
+const Button = ({ type, buttonText, brand = "" }) => {
+
+    const parse = () => {
+        switch (type) {
         case 'XL':
-            buttonClass = "button--xl";
-
+            return "button--xl";
         case 'M':
-            buttonClass = "button--m";
-
+            return "button--m";
         case 'Brand':
-            buttonClass = "button--brand";
-        
+            return "button--brand";
         default:
-            buttonClass = "button--m";
+            return "button--m";
+        }
     }
 
+    let buttonClass = parse();
+
     return (
-        <a className={buttonClass}>
-             <span className="button__text">{ props.buttonText }</span>
+        <a className={"button " + buttonClass + " " + brand }>
+             <span className="button__text">{ buttonText }</span>
         </a>
     )
+}
+
+Button.propTypes = {
+    type: PropTypes.string,
+    buttonText: PropTypes.string,
+    brand: PropTypes.string
 }
 
 export default Button;

@@ -1,4 +1,4 @@
-import './index.css'
+import './index.scss'
 import RoutesApp from './Routes/routes'
 
 function App() {

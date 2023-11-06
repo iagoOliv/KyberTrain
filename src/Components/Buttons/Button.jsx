@@ -3,21 +3,20 @@ import { Google, Apple } from 'react-bootstrap-icons';
 import './Button.scss';
 
 const Button = ({ type, buttonText, brand = "" }) => {
-    
+    let brandIcon = "";
+
     if (brand != "") {
-        brand == "apple"
+        brandIcon = brand == "apple"
             ? <Apple className="button__img"></Apple> 
             : <Google className="button__img"></Google>
     }
-    
+
     const parse = () => {
         switch (type) {
         case 'XL':
             return "button--xl";
         case 'M':
             return "button--m";
-        case 'Brand':
-            return "button--brand";
         default:
             return "button--m";
         }
@@ -26,8 +25,9 @@ const Button = ({ type, buttonText, brand = "" }) => {
     let buttonClass = parse();
 
     return (
-        <a className={"button " + buttonClass + " " + brand }>
-            { brand }
+        // class=" button button--XL apple button--brand "
+        <a className={"button " + buttonClass + " " + brand + " " + (brand != "" ?  "button--brand" : "") }>
+            { brandIcon }
             <span className="button__text">{ buttonText }</span>
         </a>
     )

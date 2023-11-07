@@ -3,8 +3,7 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 
-export default function RoutesApp()
-{
+export default function RoutesApp() {
     return (
         <BrowserRouter>
             <Routes>

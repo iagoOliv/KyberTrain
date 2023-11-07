@@ -1,6 +1,0 @@
-O que vamos construir por agora?
-
- - [x] Criar o projeto
- - [ ] Criar os componentes da página home
- - [ ] Criar os componentes da página de Login
- - [ ] Criar as rotas da aplicação com Router

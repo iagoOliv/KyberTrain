@@ -1,9 +1,16 @@
-import PropTypes from 'prop-types';
+import React from 'react';
+import { ReactElement } from 'react';
 import { Google, Apple } from 'react-bootstrap-icons';
 import './Button.scss';
 
-const Button = ({ type, buttonText, brand = "" }) => {
-    let brandIcon = "";
+type ButtonProps = {
+    type: string,
+    buttonText: string,
+    brand?: string
+}
+
+const Button = ({ type, buttonText, brand = "" }:ButtonProps) => {
+    let brandIcon:ReactElement | undefined;
 
     if (brand != "") {
         brandIcon = brand == "apple"
@@ -22,7 +29,7 @@ const Button = ({ type, buttonText, brand = "" }) => {
         }
     }
 
-    let buttonClass = parse();
+    const buttonClass = parse();
 
     return (
         // class=" button button--XL apple button--brand "
@@ -31,12 +38,6 @@ const Button = ({ type, buttonText, brand = "" }) => {
             <span className="button__text">{ buttonText }</span>
         </a>
     )
-}
-
-Button.propTypes = {
-    type: PropTypes.string,
-    buttonText: PropTypes.string,
-    brand: PropTypes.string
 }
 
 export default Button;

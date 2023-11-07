@@ -1,3 +1,4 @@
+import React from 'react';
 import Button from '../Buttons/Button';
 import './Header.scss';
 

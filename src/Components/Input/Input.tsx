@@ -1,18 +1,17 @@
 import PropTypes from 'prop-types';
 
-const Input = ({ type, inputText, inputIcon = "" }) => {
-    
+const Input = ({ inputType, inputText, inputIcon = "" }) => {
 
     return (
-        <input type={type}>
-            { inputIcon != "" ? <img src={ inputIcon }></img> : "" }
+        <input type={inputType}>
+            { inputIcon !== "" ? <img src={ inputIcon } alt=""></img> : "" }
             <label>{ inputText }</label>
         </input>
     )
 }
 
 Input.propTypes = {
-    type: PropTypes.string,
+    inputType: PropTypes.string,
     inputText: PropTypes.string,
     inputIcon: PropTypes.string
 }

@@ -17,3 +17,12 @@ a {
     margin: 0 1rem;
     transition: all 0.2s ease-in-out;
 }
+
+.header__wrapper {
+    padding: 10px 0;
+}
+
+.header__wrapper a{
+    display: flex;
+    margin: .8rem;
+}

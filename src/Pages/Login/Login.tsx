@@ -14,7 +14,7 @@ function Login() {
         <section className="container__fullscreen--withheader">
             <div className="login">
                 <form className="login__form">
-                    <h1 className="page__title">Entrar com sua conta</h1>
+                    <h1 className="login__title">Entrar com sua conta</h1>
                     <div className="login__wrapper">
                         <InputText inputType="email" inputIcon={ <Envelope></Envelope> } inputMessage="Insira seu e-mail" />
                         <InputText inputType="password" inputIcon={ <Lock></Lock> }  inputMessage="Insira sua senha"/>

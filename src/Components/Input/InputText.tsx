@@ -1,15 +1,18 @@
 import React, {ReactElement} from 'react';
+import './Input.scss';
 
 type InputProps = {
-    inputText: string,
     inputIcon?: ReactElement
+    inputType: string
+    inputMessage: string
 }
-const InputText = ({ inputText, inputIcon }:InputProps) => {
+
+const InputText = ({ inputIcon, inputType, inputMessage }:InputProps) => {
     return (
         <>
-            <label>{ inputText }</label>
-            { inputIcon != null ?  <>{ inputIcon }</> : "" }
-            <input type="text" />
+            {/* <label>{ inputText }</label> */}
+            <input type={inputType} placeholder={inputMessage}/>
+            <span className='input-icon'>{ inputIcon != null ?  <>{ inputIcon }</> : "" }</span>
         </>
     )
 }

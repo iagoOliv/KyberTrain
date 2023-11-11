@@ -1,0 +1,12 @@
+.footer-mini {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: .8rem 2.4rem;
+    height: 6rem;
+    width: 100%;
+    background: linear-gradient(#03071200, #030712);
+}

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:wght@300;400;500;600;700;800&display=swap');
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 
@@ -23,54 +25,84 @@ html {
 *::after {
   padding: 0;
   margin: 0;
-  box-sizing: auto;
+  box-sizing: border-box;
 }
 
 body {
+  font-family: 'Work Sans', sans-serif;
   padding: 0;
   font-size: 1.6rem;
   display: flex;
   flex-direction: column;
   width: 100%;
-  box-sizing: border-box;
   background: var(--w-foreground-900);
+  color: #94a3b8;
 }
 
-.header {
-  width: 100%;
-  height: 8rem;
-  display: flex;
-  justify-content: space-between;
-  background: var(--w-foreground-950);
-}
-
-.header__wrapper {
-  display: flex;
-  gap: .8rem;
-}
-
-.header__wrapper--link {
+.link {
   text-decoration: none;
-}
+  display: flex;
+  gap: .4rem;
 
-.container {
-  &__fullscreen {
-    &--withheader {
-      width: 100%;
-      height: 100vh;
+  &__text {
+    text-decoration: none;
+  
+    &:visited {
+      text-decoration: inherit;
+      color: inherit;
     }
   }
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.separator {
+  width: 100%;
+  height: .2rem;
+  border-radius: 10rem;
+  background: #334155;
+}
+
+.container {
+  &__fullscreen {
+    width: 100%;
+    height: 100vh;
+
+    &--withheader {
+      width: 100%;
+      height: calc(100vh - 8rem);
+    }
   }
-  a:hover {
-    color: #747bff;
+}
+
+.util {
+  &__wrapper {
+    &--1_6rem {
+      display: flex;
+      gap: 1.6rem;
+    }
+
+    &--8rem {
+      display: flex;
+      gap: .8rem;
+    }
+
+    &--4rem {
+      display: flex;
+      gap: .4rem;
+    }
   }
-  button {
-    background-color: #f9f9f9;
+  &__wrappercolumn {
+    &--8rem {
+      display: flex;
+      flex-direction: column;
+      gap: .8rem;
+    }
+  }
+}
+
+input,
+button {
+  &:focus,
+  &:active {
+    outline: .2rem solid #2563eb;
   }
 }

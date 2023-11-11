@@ -4,12 +4,18 @@ import { Google, Apple } from 'react-bootstrap-icons';
 import './Button.scss';
 
 type ButtonProps = {
-    type: string,
+    size: string,
     buttonText: string,
-    brand?: string
+    brand?: string,
+    isLink?: boolean,
+    goTo?: string
 }
 
-const Button = ({ type, buttonText, brand = "" }:ButtonProps) => {
+const Button = ({ size, buttonText, brand="", isLink=false, goTo="#"}:ButtonProps) => {
+    /*
+        Os botões obrigatoriamente devem ter um tamanho XL ou Médio, um href 
+        e opcionalmente ter uma logo ou ser um link
+    */
     let brandIcon:ReactElement | undefined;
 
     if (brand != "") {
@@ -18,22 +24,13 @@ const Button = ({ type, buttonText, brand = "" }:ButtonProps) => {
             : <Google className="button__img"></Google>
     }
 
-    const parse = () => {
-        switch (type) {
-        case 'XL':
-            return "button--xl";
-        case 'M':
-            return "button--m";
-        default:
-            return "button--m";
-        }
-    }
-
-    const buttonClass = parse();
+    const buttonClass = size == "XL" ? "button--xl" : "button--m";
 
     return (
         // class=" button button--XL apple button--brand "
-        <a className={"button " + buttonClass + " " + brand + " " + (brand != "" ?  "button--brand" : "") }>
+        <a href={ goTo } className={
+            "button " + buttonClass + " " + brand + " " + (brand != "" ?  "button--brand" : "") + (isLink ? "button--link" : "") 
+            }>
             { brandIcon }
             <span className="button__text">{ buttonText }</span>
         </a>

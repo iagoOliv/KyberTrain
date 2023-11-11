@@ -1,4 +1,4 @@
-import React, {ReactElement} from 'react';
+import React, { ReactElement } from 'react';
 import './Input.scss';
 
 type InputProps = {
@@ -10,9 +10,16 @@ type InputProps = {
 const InputText = ({ inputIcon, inputType, inputMessage }:InputProps) => {
     return (
         <>
-            {/* <label>{ inputText }</label> */}
+            {
+            inputIcon != null
+            ?
+            <div className='input__wrapper'>
+                { inputIcon != null ?  <>{ inputIcon }</> : "" }
+                <input type={inputType} placeholder={inputMessage}/>
+            </div>
+            :
             <input type={inputType} placeholder={inputMessage}/>
-            <span className='input-icon'>{ inputIcon != null ?  <>{ inputIcon }</> : "" }</span>
+            }
         </>
     )
 }

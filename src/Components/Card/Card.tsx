@@ -30,7 +30,7 @@ export default function Card({name, description, rating, isTrending}:CardProps) 
                 <div className="rating">
                     <span className="rating__text"> {rating} </span>
                     <div className="rating__stars">
-                        stars
+                        { stars }
                     </div>
                 </div>
             </div>

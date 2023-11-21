@@ -1,0 +1,28 @@
+.container__text {
+    display: flex;
+    padding: 1.8em;
+    height: 7.2em;
+    font-size: 1.4em;
+    font-weight: 600;
+    color: #ffffff;
+    background: #030712;
+    align-items: center;
+    align-content: center;
+    flex-shrink: 0;
+    align-self: stretch;
+    flex-wrap: wrap;
+}
+
+.container__main {
+    display: flex;
+    flex-direction: column;
+    padding: 1.8em;
+
+    &__title {
+        font-size: 1.2em;
+        font-weight: 300;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #ffffff;
+        margin: .8em;
+    }
+}

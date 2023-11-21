@@ -1,0 +1,73 @@
+.hero {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background: linear-gradient(transparent, var(--w-foreground-950));
+
+    &__container {
+        position: absolute;
+        max-width: 70rem;
+        top: 20%;
+        left: 4.2rem;
+        padding: 1.6rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+        
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 7.2rem;
+        color: var(--w-foreground-200);
+    }
+    &__subtitle {
+        font-weight: 700;
+        font-size: 5.2rem;
+        color: var(--w-foreground-500);
+    }
+
+    &__feature {
+        color: #2563eb;
+    }
+}
+
+.decorator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.partners {
+    width: 100%;
+    padding: 3.2rem 0;
+    background: var(--w-foreground-950);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+
+    &__partner {
+        height: 12.8rem;
+        filter: saturate(0);
+    }
+}
+
+.courses {
+    width: 100%;
+    padding: 6.4rem 4.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.4rem;
+    background: var(--w-foreground-950);
+
+    &__wrapper {
+        width: 100%;
+    }
+}

@@ -1,21 +1,19 @@
 import React from 'react';
 import { ReactElement } from 'react';
-import { Google, Apple } from 'react-bootstrap-icons';
+import { Google, Apple, InfoCircle } from 'react-bootstrap-icons';
 import './Button.scss';
 
-type ButtonProps = {
+interface ButtonProps {
     size: string,
     buttonText: string,
     brand?: string,
     isLink?: boolean,
-    goTo?: string
+    redirects?: boolean,
+    goTo?: string,
+    info?:boolean
 }
 
-const Button = ({ size, buttonText, brand="", isLink=false, goTo="#"}:ButtonProps) => {
-    /*
-        Os botões obrigatoriamente devem ter um tamanho XL ou Médio, um href 
-        e opcionalmente ter uma logo ou ser um link
-    */
+const Button = ({ size, buttonText, brand="", redirects=false, isLink=false, goTo="#", info=false}:ButtonProps) => {
     let brandIcon:ReactElement | undefined;
 
     if (brand != "") {
@@ -24,16 +22,39 @@ const Button = ({ size, buttonText, brand="", isLink=false, goTo="#"}:ButtonProp
             : <Google className="button__img"></Google>
     }
 
-    const buttonClass = size == "XL" ? "button--xl" : "button--m";
+    size = size.toLowerCase()
 
     return (
-        // class=" button button--XL apple button--brand "
-        <a href={ goTo } className={
-            "button " + buttonClass + " " + brand + " " + (brand != "" ?  "button--brand" : "") + (isLink ? "button--link" : "") 
-            }>
-            { brandIcon }
-            <span className="button__text">{ buttonText }</span>
-        </a>
+        redirects
+        ?
+        <>
+            <a 
+            href={goTo}
+            className={
+                "button " + 
+                "button--" + size + " " + 
+                (brand != "" ? "button--brand " + brand : "") + 
+                (isLink ? "button--link" : "")
+                }>
+                { brandIcon }
+                <span className="button__text">{buttonText}</span>
+            </a>
+        </>
+        :
+        <>
+            <a 
+            className={
+                "button " + 
+                "button--" + size + " " + 
+                (brand != "" ? "button--brand " + brand : "") + 
+                (isLink ? "button--link" : "") +
+                (info ? " info" : "") 
+                }>
+                { brandIcon }
+                {info ? <InfoCircle /> : ""}
+                <span className="button__text">{buttonText}</span>
+            </a>
+        </>
     )
 }
 

@@ -14,6 +14,10 @@
   --w-foreground-700: #334155;
   --w-foreground-600: #475569;
   --w-foreground-500: #64748b;
+  --w-foreground-400: #94a3b8;
+  --w-foreground-300: #cbd5e1;
+  --w-foreground-200: #e2e8f0;
+  --w-foreground-100: #f1f5f9;
 }
 
 html {
@@ -91,11 +95,34 @@ body {
     }
   }
   &__wrappercolumn {
+    &--2_4rem {
+      display: flex;
+      flex-direction: column;
+      gap: .8rem;
+    }
+    &--1_6rem {
+      display: flex;
+      flex-direction: column;
+      gap: .8rem;
+    }
     &--8rem {
       display: flex;
       flex-direction: column;
       gap: .8rem;
     }
+    &--4rem {
+      display: flex;
+      flex-direction: column;
+      gap: .4rem;
+    }
+  }
+}
+
+.list {
+  &__overflow {
+    display: flex;
+    gap: .8rem;
+    overflow-y: auto;
   }
 }
 

@@ -33,8 +33,8 @@ const Header = () => {
             </div>
 
             <div className="header__wrapper util__wrapper--1_6rem">
-                <Button goTo="/login" size="XL" isLink={true} buttonText="Cadastrar" />
-                <Button goTo="/login" size="XL" buttonText="Login" />
+                <Button size="XL" isLink={true} buttonText="Cadastrar" redirects={true} goTo="/login"/>
+                <Button size="XL" buttonText="Entrar" redirects={true} goTo="/login"/>
             </div>
         </header>
     )

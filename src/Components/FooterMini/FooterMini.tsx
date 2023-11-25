@@ -5,8 +5,8 @@ const FooterMini = () => {
     return (
         <footer className="footer-mini">
             <div className="util__wrapper--8rem">
-                <span>Copyright CyCad © 2023</span>
-                <span>Made with 💙 in Brazil in IFPB</span>
+                <span>Copyright KyberTrain © 2023</span>
+                <span>Feito com &hearts; na IFPB pelos alunos de Redes</span>
             </div>
             <div className="util__wrapper--8rem">
                 <span>Política de Privacidade</span>

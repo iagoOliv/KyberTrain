@@ -34,8 +34,10 @@ const Button = ({ size, buttonText, brand="", redirects=false, isLink=false, goT
                 "button " + 
                 "button--" + size + " " + 
                 (brand != "" ? "button--brand " + brand : "") + 
-                (isLink ? "button--link" : "")
+                (isLink ? "button--link" : " ") +
+                (info ? " info" : "")
                 }>
+                {info ? <InfoCircle /> : ""}
                 { brandIcon }
                 <span className="button__text">{buttonText}</span>
             </a>

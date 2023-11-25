@@ -1,28 +1,74 @@
-.container__text {
-    display: flex;
-    padding: 1.8em;
-    height: 7.2em;
-    font-size: 1.4em;
-    font-weight: 600;
-    color: #ffffff;
-    background: #030712;
-    align-items: center;
-    align-content: center;
-    flex-shrink: 0;
-    align-self: stretch;
-    flex-wrap: wrap;
+.container {
+    &__hero {
+        padding: 3.2rem 1.6rem;
+        font-size: 1.4em;
+        font-weight: 600;
+        color: #ffffff;
+        background: #030712;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 1.6rem;
+    }
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        padding: 1.8em;
+
+        &__content {
+            &__cards {
+                display: flex;
+                gap: .4rem;
+            }
+        }
+
+        &__title {
+            font-size: 1.2em;
+            font-weight: 300;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #ffffff;
+            margin: .8em;
+        }
+    }
 }
 
-.container__main {
-    display: flex;
-    flex-direction: column;
-    padding: 1.8em;
+.categorypicker {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    gap: .8rem;
 
-    &__title {
-        font-size: 1.2em;
-        font-weight: 300;
-        font-family: Arial, Helvetica, sans-serif;
-        color: #ffffff;
-        margin: .8em;
+    &--blue { background: #1d4ed8; }
+    &--red { background: #b91c1c; }
+    &--yellow { background: #ca8a04; }
+    &--violet { background: #9333ea; }
+
+    &__course {
+        color: var(--w-foreground-200);
+        position: relative;
+        font-size: 1.6rem;
+        padding: .8rem 2.4rem;
+        width: 12.8rem;
+        background: var(--w-foreground-700);
+        border-radius: .4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &--blue { background: #0a1026; }
+        &--red { background: #260505; }
+        &--yellow { background: #260e02; }
+        &--violet { background: #0f0e26; }
+
+        &--sidebar {
+            border-radius: .4rem 0 0 .4rem;
+            width: .4rem;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
     }
 }

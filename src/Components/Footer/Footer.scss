@@ -1,5 +1,58 @@
 .footer {
-    height: 36rem;
+    padding: 12.8rem 3.2rem;
     width: 100%;
     background: var(--wp-foreground-900);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 3.2rem;
+
+    &__copyright {
+        width: 100%;
+        padding: 1.6rem 3.2rem;
+        background: #01030AFF;
+        color: var(--w-foreground-700);
+        display: flex;
+        gap: 1.6rem;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: center;
+        gap: 4.2rem;
+        flex-wrap: wrap;
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+
+        &--wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 1.6rem;
+        }
+
+        &--title {
+            color: var(--w-foreground-100);
+            font-weight: 700;
+        }
+
+        &--link {
+            color: var(--w-foreground-400);
+        }
+    }
+
+    &__brand {
+        font-weight: 700;
+        font-size: 3.2rem;
+        font-family: 'Kanit', sans-serif;
+        display: flex;
+        align-items: center;
+        gap: .8rem
+    }
 }

@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Ubuntu:wght@300&display=swap');
+
+
 .banner {
     background-color: #2d2f31cb;
     color: #fff;
     padding-top: 3.6em;
     padding-left: 3.2em;
-    padding-bottom: 2.4em;
     opacity: 0.9;
     
     &__title {
@@ -20,7 +22,6 @@
         transform: scale(0.9);
         font-weight: 400;
         font-size: 1.25em;
-        margin: .8 .8em;
         color: #fff;
         text-align: left;
     }
@@ -34,8 +35,19 @@
         margin-right: 2em;
         padding-top: 1.4em;
         padding-bottom: 2em;
+        margin-bottom: 1.2em;
         color: #fff;
         text-align: left;
+    }
+
+    &__description svg {
+        transform: translateX(-.2em);
+        transform: translateY(.125em);
+    }
+
+    &__description p {
+        margin-bottom:  .4em;
+        margin-right: 1.2em;
     }
 
     &__description span {
@@ -45,14 +57,97 @@
     }
 
     &__description__lang {
-        width: 50%;
+        width: 70%;
         display: flex;
         justify-content: space-between;
         flex-direction: row;
     }
+
+    &__ratings {
+        display:  flex;
+        flex-direction:  row;
+        gap: 1em;
+    }
 }
 
 .card {
-    padding: 3.2em;
+    padding: 2.5em 6em;
+    display: block;
+    opacity: 0.89;
     font-size: medium;
+    margin: 0 auto;
+    background-color: whitesmoke;
+    justify-content: center;
+    align-items: center;
+    max-width: 48em;
+    overflow: hidden;
+    transition: height 0.3s;
+
+    &__title {
+        text-align: center;
+        font-size: 1.8em;
+        font-weight: 600;
+        color: #0c3053cb;
+        margin-bottom: 1em;
+    }
+
+    &__description {
+        text-align: justify;
+        color: #0c3053cb;
+        font-size: 0.89em;
+        font-weight: 400;
+        margin-bottom: 2em;
+        padding-bottom: 1.4em;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1em;
+        column-gap: 5.2em;
+    }
+
+    
+    &__description p, &__description li {
+        height: 4.8em;
+        list-style: none;
+        line-height: 1.1em;
+        margin-bottom: 1em;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    &__description svg {
+        transform: translate(-2em, 0.125em);
+    }
+
+    &__expand {
+        transform: translateY(2.55em);
+        margin-top: 1.2em;
+        padding: 1.2em;
+        width: 13em;
+        bottom: 0;
+        color: #0c2f535d;
+        cursor: pointer;
+        text-align: center;
+        transition: all 0.25s ease-in-out;
+        
+        &:hover {
+            background-color: #b3b3b38e;
+            border-radius: .8em;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        a {
+            color: #0c2f53c4;
+            font-size: 1em;
+            font-weight: 600;
+        }
+    }
+}
+
+.expanded {
+    height: 34em !important;
+
+    .card__expand {
+        transition: all 0.25s ease-in-out;
+        transform: translateY(26rem);
+    }
 }

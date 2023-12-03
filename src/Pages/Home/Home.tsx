@@ -1,10 +1,9 @@
-import React from 'react';
 import Header from '../../Components/Header/Header';
-import './Home.scss';
-import placeholderCoursesData from '../../PlaceholderData';
 import Button from "../../Components/Buttons/Button";
 import Card from '../../Components/Card/Card';
 import Footer from '../../Components/Footer/Footer';
+import placeholderCoursesData from '../../PlaceholderData';
+import './Home.scss';
 
 export default function Home()
 {
@@ -21,6 +20,10 @@ export default function Home()
                     <Button size="XL" buttonText="Cadastrar" isLink={true} redirects={true} goTo="/login"/>
                     <Button size="XL" buttonText="Entrar" redirects={true} goTo="/login"/>
                 </div>
+            </div>
+
+            <div>
+                <img className="floating-logo" src="public/logo-alt.png" alt="Logo flutuante da Kybertrain"/>
             </div>
         </section>
         <img className="decorator" src="/line-1.svg" alt="Uma linha azul brilhante passa por todo a seção Hero do site"/>

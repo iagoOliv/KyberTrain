@@ -1,4 +1,3 @@
-import React from 'react';
 import './Header.scss';
 import { ChevronDown } from 'react-bootstrap-icons';
 import Button from '../Buttons/Button';

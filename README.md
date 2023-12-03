@@ -1,22 +1,18 @@
-# CyCad
-CyCad é um protótipo feito em React de uma WebApp de cursos focada no aprendizado de CyberSegurança.
-
-Feito em:
-
-<img src="https://skillicons.dev/icons?i=react,ts,sass,nodejs"></img>
+# KyberTrain
+KyberTrain é um protótipo feito em React de uma WebApp de cursos focada no aprendizado de CyberSegurança.
 
 ## Como Rodar?
 ### Instale as dependências
 ```
 npm i
 ```
-### Construa a aplicação
+### Inicie o servidor Express
+```
+npm run express
+```
+### Inicie o servidor Vite
 ```
 npm run build
-```
-### Inicie o servidor
-```
-npm run preview
 ```
 
 ## Créditos

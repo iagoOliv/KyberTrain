@@ -1,0 +1,15 @@
+# Desvendando o Phishing
+
+## O que exatamente é?
+
+Phishing é uma forma de ataque cibernético sofisticada que se baseia em técnicas de engenharia social para induzir indivíduos a revelarem informações confidenciais, como senhas, dados bancários e informações pessoais. Este método malicioso geralmente se manifesta na forma de mensagens de e-mail, mensagens instantâneas ou páginas da web fraudulentas, que são habilmente projetadas para se assemelhar a comunicações legítimas de entidades confiáveis.
+
+O termo "phishing" é derivado da palavra em inglês "fishing" (pesca), refletindo a analogia de lançar iscas para atrair usuários desavisados. Os atacantes empregam uma variedade de táticas persuasivas, como urgência fictícia, alegações de atividades suspeitas em contas online ou solicitações aparentemente legítimas de atualizações de informações, para manipular as vítimas e obter acesso não autorizado a dados sensíveis.
+
+A sofisticação crescente das técnicas de phishing torna imperativo que os usuários estejam constantemente vigilantes, adotem práticas de segurança online e estejam cientes dos sinais indicativos desse tipo de ameaça digital. Medidas como verificação cuidadosa de remetentes, análise crítica de mensagens e a utilização de soluções de segurança digital são essenciais para mitigar os riscos associados ao phishing e proteger a integridade das informações pessoais e empresariais.
+
+O phishing, uma forma avançada de ataque cibernético, representa uma ameaça crescente na paisagem digital contemporânea. Este método engenhoso explora as vulnerabilidades humanas, empregando técnicas de engenharia social para persuadir indivíduos a divulgar informações confidenciais, como senhas, dados bancários e informações pessoais sensíveis. A origem do termo "phishing" está na palavra em inglês "fishing" (pesca), refletindo a estratégia de lançar iscas digitais para atrair usuários desatentos.
+
+Os perpetradores do phishing utilizam uma variedade de abordagens enganosas, como a criação de mensagens de e-mail convincentes, mensagens instantâneas ou até mesmo a construção de páginas da web fraudulentas que se assemelham de maneira extraordinária a comunicações autênticas de instituições confiáveis. Táticas como a criação de uma sensação de urgência fictícia, alegações de atividades suspeitas em contas online ou solicitações aparentemente legítimas para atualizações de informações são frequentemente incorporadas para manipular as vítimas e obter acesso não autorizado a informações sigilosas.
+
+À medida que as técnicas de phishing evoluem em complexidade, é imperativo que os usuários adotem uma postura proativa em relação à segurança online. Práticas como a verificação minuciosa de remetentes, uma análise criteriosa de mensagens recebidas e a implementação de soluções de segurança digital robustas são essenciais para mitigar os riscos associados ao phishing. A conscientização constante sobre os sinais reveladores dessas ameaças digitais é crucial para preservar a integridade das informações pessoais e empresariais em um ambiente digital cada vez mais interconectado.

@@ -1,4 +1,3 @@
-import React from "react";
 import FooterMini from "../../Components/FooterMini/FooterMini";
 import Button from "../../Components/Buttons/Button";
 import InputText from "../../Components/Input/InputText";

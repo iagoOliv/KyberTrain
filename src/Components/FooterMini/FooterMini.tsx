@@ -1,4 +1,3 @@
-import React from "react";
 import './FooterMini.scss';
 
 const FooterMini = () => {

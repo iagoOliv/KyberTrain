@@ -1,4 +1,3 @@
-import React from 'react'
 import "./Explore.scss";
 import placeholderCoursesData from "../../PlaceholderData";
 import Header from "../../Components/Header/Header";
@@ -38,7 +37,7 @@ function Explore() {
 
                 <section className="container__main">
                     <div className="container__main__title">
-                        <h1>Para iniciantes</h1>
+                        <h1>Para inciantes e estudantes</h1>
                     </div>
                     <div className="container__main__content">
                         <div className="container__main__content__cards">

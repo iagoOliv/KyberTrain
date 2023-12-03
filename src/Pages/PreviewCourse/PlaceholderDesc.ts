@@ -1,12 +1,14 @@
 const DescContent = [
     {
         id: 1,
+        image: "https://img-b.udemycdn.com/course/240x135/805864_659d_4.jpg",
         name: "Malwares, Ransomwares e outros vírus",
         teacher: ["Julia Beatriz", "Camilly Souza"],
         dataRelease: "26/11/2023",
         bannerTitle: "Curso completo de Malwares, Ransomwares e outros vírus",
         bannerText: "Aulas Completas de Malwares. Saiba como se proteger e mitigar tais ataques em ambientes empresariais.",
-        rating: 4.8,
+        rating: 3.5,
+        price: 26.90,
         learnings: [
             {
                 topico: 1,
@@ -44,8 +46,6 @@ const DescContent = [
               }
         ]
     }
-
-
 ]
 
 export default DescContent;

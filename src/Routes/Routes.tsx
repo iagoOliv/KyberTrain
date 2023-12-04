@@ -1,9 +1,10 @@
+import React from "react";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import Explore from "../Pages/Explore/Explore";
 import Course from "../Pages/Course/Course";
-import Learn from "../Pages/Learn/Learn"
+import PreviewCourse from "../Pages/PreviewCourse/PreviewCourse";
 
 export default function RoutesApp() {
     return (
@@ -14,7 +15,7 @@ export default function RoutesApp() {
 
                 <Route path="/explore" element={<Explore />} />
                 <Route path="/course/:id" element={<Course />} />
-                <Route path="/learn/:id/:chapter/:lesson" element={<Learn />} />
+                <Route path="/course/:id/preview" element={<PreviewCourse />} />
             </Routes>
         </BrowserRouter>
     )

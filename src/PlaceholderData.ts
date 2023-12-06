@@ -1,8 +1,8 @@
 const placeholderCoursesData = [
     {
         id:1,
-        name:"Malwares, Ransomwares e outros vírus",
-        description:"Aprenda a identificar e solucionar vulnerabilidades de Malware em um ambiente corporativo",
+        name:"Phishing e suas prevenções",
+        description:"Identificando e lidando com Phishings no ambiente online para evitar roubos de dados",
         rating:4.8,
         isTrending:true,
         bannerImg:"https://img-b.udemycdn.com/course/240x135/805864_659d_4.jpg",
@@ -11,7 +11,7 @@ const placeholderCoursesData = [
         id:2,
         name:"Invasões em Redes sem Fio (Wi-Fi)",
         description:"Aprenda a fazer pentest em redes Wi-Fi usando o WireShark, NMAP e outros",
-        rating:4.2,
+        rating:4.6,
         isTrending:true,
         bannerImg:"https://img-b.udemycdn.com/course/240x135/805864_659d_4.jpg",
     },

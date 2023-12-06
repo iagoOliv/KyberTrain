@@ -14,18 +14,25 @@ const app = express();
 // Get general course data
 app.get("/api/course/:id/", (_req, res) => {
     let path = __dirname + `/data/courses/${_req.params.id}/general/data.json`;
-    let file = fs.readFileSync(path, "utf-8");
-    res.json(JSON.parse(file));
+    try {
+        let file = fs.readFileSync(path, "utf-8");
+        res.json(JSON.parse(file));
+    } catch (e) {
+        res.status(500).json({error: "Não foi possível achar este artigo."})
+    }
+
 });
 
 // Get course class
-app.get("/api/course/:id/chapter/:chapter/:aula", (_req, res) => {
-    const path = __dirname + `/data/courses/${_req.params.id}/chapter-${_req.params.chapter}/aula-${_req.params.aula}.md`;
-    const file = fs.readFileSync(path, "utf-8");
+app.get("/api/course/:id/chapter/:chapter", (_req, res) => {
+    // Sanitize it too
+    const path = __dirname + `/data/courses/${_req.params.id}/chapter-${_req.params.chapter}/1.md`;
     try {
-        res(marked(file.toString()));
+        const file = fs.readFileSync(path, "utf-8");
+        const parsedMd = marked(file.toString())
+        res.send(parsedMd);
     } catch (e) {
-        console.log("Couldn't parse the Markdown file.")
+        console.log("Couldn't parse the Markdown file.", e)
     }
 });
 

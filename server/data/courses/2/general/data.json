@@ -1,8 +1,8 @@
 {
-  "id":1,
-  "name":"Malwares, Ransomwares e outros vírus",
-  "description":"Aprenda a identificar e solucionar vulnerabilidades de Malware em um ambiente corporativo",
-  "rating":4.8,
+  "id":2,
+  "name":"Introdução à segurança corporativa",
+  "description":"Iniciando na segurança corporativa",
+  "rating":4.92,
   "isTrending":true,
   "release": "2023/11/26",
   "bannerImg":"https://img-b.udemycdn.com/course/240x135/805864_659d_4.jpg",
@@ -10,23 +10,27 @@
   "chapters": [
     {
       "topic": 1,
-      "content": "Aprenda a importância de se ter um ambiente seguro"
+      "content": "Introdução"
     },
     {
       "topic": 2,
-      "content": "Aprenda a identificar os tipos de Malware"
+      "content": "Políticas e Diretrizes de Segurança"
     },
     {
       "topic": 3,
-      "content": "Aprenda os danos que um Malware pode causar"
+      "content": "Identificação de Usuários"
     },
     {
       "topic": 4,
-      "content": "Aprenda a identificar e solucionar vulnerabilidades de Malware"
+      "content": "Políticas de Acesso Condicional"
     },
     {
       "topic": 5,
-      "content": "Antivírus"
+      "content": "Política de Backup e Recuperação"
+    },
+    {
+      "topic": 6,
+      "content": "Política de Senhas"
     }
   ]
 }

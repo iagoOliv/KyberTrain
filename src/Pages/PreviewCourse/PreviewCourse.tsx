@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import DescContent from './PlaceholderDesc';
 import { SidebarCoursePreview } from '../../Components/Sidebar/SidebarCoursePreview';
 import { useParams } from 'react-router-dom';
@@ -6,24 +6,24 @@ import { motion } from 'framer-motion';
 import { ExclamationCircleFill, Globe, Star, StarFill, StarHalf } from 'react-bootstrap-icons';
 import Header from '../../Components/Header/Header';
 import Footer from '../../Components/Footer/Footer';
-import './style.scss';
+import './PreviewCourse.scss';
 
 function generateStars(rating: number) {
-  const stars = [];
-  const fullStars = Math.floor(rating);
-  const halfStars = Math.ceil(rating - fullStars);
+    const stars = [];
+    const fullStars = Math.floor(rating);
+    const halfStars = Math.ceil(rating - fullStars);
 
-  for (let i = 0; i < fullStars; i++) {
+    for (let i = 0; i < fullStars; i++) {
     stars.push(<StarFill fill="#3b82f6" />);
-  }
+    }
 
-  if (halfStars === 1) {
+    if (halfStars === 1) {
     stars.push(<StarHalf fill="#3b82f6" />);
-  }
+    }
 
-  for (let i = stars.length; i < 5; i++) {
+    for (let i = stars.length; i < 5; i++) {
     stars.push(<Star />);
-  }
+    }
 
   return stars;
 }
@@ -62,9 +62,9 @@ const PreviewCourse = () => {
     }
   }, [courseId]);
 
-  if (!descContent || Object.keys(descContent).length === 0) {
-    return <h1>Curso não encontrado</h1>;
-  }
+    if (!descContent || Object.keys(descContent).length === 0) {
+        return <h1>Curso não encontrado</h1>;
+    }
 
   const handleExpand = () => {
     setIsExpanded(!isExpanded);

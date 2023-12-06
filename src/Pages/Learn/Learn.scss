@@ -75,7 +75,7 @@
     max-width: 60rem;
     display: flex;
     flex-direction: column;
-    gap: 1.6rem;
+    gap: .8rem;
     padding-bottom: 2.4rem;
 
     & h1 {
@@ -83,6 +83,10 @@
       font-weight: 700;
       font-size: 4.2rem;
       color: var(--w-foreground-200);
+    }
+
+    & h2 {
+      margin-top: 1.6rem;
     }
 
     & p {

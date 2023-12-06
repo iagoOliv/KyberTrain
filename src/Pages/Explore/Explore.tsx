@@ -9,7 +9,6 @@ function Explore() {
         <>
             <Header/>
             <div className="sub__header">
-                {/* fazer a estrutura do cabeçalho onde se encontram os tópicos de cursos */}
             </div>
             <main>
                 <section className="container__hero">

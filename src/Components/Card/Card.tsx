@@ -1,8 +1,8 @@
+import './Card.scss';
 import Button from '../Buttons/Button';
 import { Star, StarFill } from 'react-bootstrap-icons';
-import './Card.scss';
 
-interface CardProps {
+type CardProps = {
     id:number,
     name:string,
     description:string,
@@ -39,8 +39,8 @@ export default function Card({id, name, description, rating, isTrending, bannerI
                 {description}
             </p>
             <div className="card__buttons">
-                <Button size="XL" buttonText="Começar" redirects={true} goTo={`/learn/${id}/1/1`} ></Button>
-                <Button size="XL" buttonText="" info={true} redirects={true} goTo={"/course/" + id}></Button>
+                <Button size="XL" buttonText="Começar" redirects={true} goTo={`/learn/${id}/1`} ></Button>
+                <Button size="XL" buttonText="" info={true}></Button>
             </div>
         </article>
     )

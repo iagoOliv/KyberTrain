@@ -1,11 +1,6 @@
-import './style.scss'
-import React from 'react'
-import DescContent from '../../Pages/PreviewCourse/PlaceholderDesc'
 import { Heart, Cart, Share } from 'react-bootstrap-icons'
 import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
-import { useParams } from 'react-router-dom'
-import Button from '../Buttons/Button'
+import './style.scss'
 
 export const SidebarCoursePreview = (props: any) => {
 

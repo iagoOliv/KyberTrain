@@ -22,8 +22,8 @@ export default function Home()
                 </div>
             </div>
 
-            <div>
-                <img className="floating-logo" src="public/logo-alt.png" alt="Logo flutuante da Kybertrain"/>
+            <div className="floating-logo__wrapper">
+                <img className="floating-logo" src="/logo-alt.png" alt="Logo flutuante da Kybertrain"/>
             </div>
         </section>
         <img className="decorator" src="/line-1.svg" alt="Uma linha azul brilhante passa por todo a seção Hero do site"/>

@@ -138,3 +138,10 @@ button {
     outline: .2rem solid #2563eb;
   }
 }
+
+.notfound {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

@@ -20,7 +20,6 @@ app.get("/api/course/:id/", (_req, res) => {
     } catch (e) {
         res.status(500).json({error: "Não foi possível achar este artigo."})
     }
-
 });
 
 // Get course class
@@ -32,7 +31,7 @@ app.get("/api/course/:id/chapter/:chapter", (_req, res) => {
         const parsedMd = marked(file.toString())
         res.send(parsedMd);
     } catch (e) {
-        console.log("Couldn't parse the Markdown file.", e)
+        res.status(500).json({error: "Não foi possível achar este artigo."})
     }
 });
 

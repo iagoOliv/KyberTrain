@@ -1,17 +1,15 @@
-import Header from "../../Components/Header/Header.tsx";
 import {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
+import HeaderLearn from "../../Components/HeaderLearn/HeaderLearn.tsx";
+import Button from "../../Components/Buttons/Button.tsx";
 import './Learn.scss'
 
 type chapterProps = {
-    topic: number,
+    topic: number | undefined,
     content: string
 }
 
 export default function Learn() {
-    /*
-        Handle not found pages
-    */
     const { id, chapter  } = useParams();
     const [success, setSuccess] = useState(false);
     const [classContent, setClassContent] = useState({});
@@ -19,7 +17,8 @@ export default function Learn() {
         id: 0,
         name: "",
         description: "",
-        chapters: []
+        chapters: [],
+        hasSimulator: false
     });
 
     // Fetch class markdown data
@@ -52,7 +51,8 @@ export default function Learn() {
                     ...data,
                     name: content.name,
                     description: content.description,
-                    chapters: content.chapters
+                    chapters: content.chapters,
+                    hasSimulator: content.hasSimulator
                 })
                 setSuccess(true);
             } catch (e) {
@@ -68,19 +68,19 @@ export default function Learn() {
         window.location.href=`./learn/${id}/${target?.getAttribute("data-chapter") ?? 1}`;
     }
 
-    const chapters = data.chapters.map((chapter: chapterProps) => {
+    const chapters = data.chapters.map((lesson: chapterProps) => {
         return <div
-            className="chapters__list--chapter"
+            className={"chapters__list--chapter" + (lesson.topic == chapter ? " chapters__list--chapter--active" : "")}
             onClick={goTo}
-            data-chapter={chapter.topic}
-        >{chapter.topic + " - " + chapter.content ?? ""}</div>
+            data-chapter={lesson.topic}
+        >{lesson.topic + " - " + lesson.content ?? ""}</div>
     })
 
 
     return(
         success ?
         <>
-            <Header></Header>
+            <HeaderLearn />
             <main className="main-wrapper">
                 <section className="chapters">
                     <div className="chapters__overview">
@@ -88,6 +88,14 @@ export default function Learn() {
                         <span className="chapters__overview--title">{data.name}</span>
                         <span className="chapters__overview--description">{data.description}</span>
                     </div>
+                    { data.hasSimulator ? 
+                        <div className="chapters__interactive">
+                            <Button size="XL" buttonText="Iniciar o simulador" />
+                        </div>
+                        : null
+                    }
+                    
+                    <h2>Capítulos</h2>
                     <div className="chapters__list">
                         {chapters.map((chapter) => (
                           <>

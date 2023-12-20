@@ -1,7 +1,7 @@
 {
   "id":1,
-  "name":"Phishing e suas prevenções",
-  "description":"Identificando e lidando com Phishings",
+  "name":"Engenharia Social",
+  "description":"Identificando e lidando com diversas Engenharia Sociais",
   "rating":4.8,
   "isTrending":true,
   "release": "2023/11/26",
@@ -11,23 +11,19 @@
   "chapters": [
     {
       "topic": 1,
-      "content": "O que é?"
+      "content": "Introdução"
     },
     {
       "topic": 2,
-      "content": "Aprenda a identificar os tipos de Phishing"
+      "content": "Phishing"
     },
     {
       "topic": 3,
-      "content": "Aprenda os danos que um Phishing pode causar"
+      "content": "Vishing"
     },
     {
       "topic": 4,
       "content": "O que fazer em caso de vazamento"
-    },
-    {
-      "topic": 5,
-      "content": "Extensões e Antivírus"
     }
   ]
 }

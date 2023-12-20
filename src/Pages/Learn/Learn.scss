@@ -81,33 +81,32 @@
     max-width: 60rem;
     display: flex;
     flex-direction: column;
+    align-item: center;
     gap: .8rem;
     padding-bottom: 2.4rem;
 
     & h1 {
-      margin-bottom: 1.6rem;
+      margin: 2.4rem 0 0 0;
       font-weight: 700;
       font-size: 4.2rem;
-      color: var(--w-foreground-200);
+      color: #38bdf8;
     }
 
-    & h2 {
-      margin-top: 1.6rem;
+    & h2, h3 {
+      margin-top: 2.4rem;
+      color: var(--w-foreground-300);
     }
 
     & img {
-      width: 100%;
+      width: 80%;
     }
 
     & p {
       margin-top: 1.6rem;
-      line-height: 1.6;
-      transition: all ease-in-out 100ms;
+      line-height: 1.75;
       border-radius: .8rem;
-
-      &:hover {
-        background: #1e293b;
-      }
+      color: var(--w-foreground-300);
+      padding: .4rem;
     }
   }
 }

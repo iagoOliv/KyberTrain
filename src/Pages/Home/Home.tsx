@@ -2,11 +2,14 @@ import Header from '../../Components/Header/Header';
 import Button from "../../Components/Buttons/Button";
 import Card from '../../Components/Card/Card';
 import Footer from '../../Components/Footer/Footer';
-import placeholderCoursesData from '../../PlaceholderData';
+import CourseCard from "../../Types/CourseCard.ts";
 import './Home.scss';
+import useCourses from "../../Hooks/useCourses.tsx";
 
 export default function Home()
 {
+    const data = useCourses();
+
     return (
         <>
         <Header />
@@ -41,8 +44,9 @@ export default function Home()
                 </div>
                 <div className="list__overflow">
                 {
-                    placeholderCoursesData.map((course) => (
+                    data.map((course: CourseCard) => (
                         <Card
+                            key={course.id}
                             id={course.id}
                             name={course.name}
                             description={course.description}

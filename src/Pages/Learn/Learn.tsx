@@ -21,6 +21,7 @@ export default function Learn() {
         hasSimulator: false
     });
 
+    // TODO: Make it its own hook
     // Fetch class markdown data
     useEffect(() => {
         const fetchData = async () => {
@@ -39,6 +40,7 @@ export default function Learn() {
         fetchData();
     }, []);
 
+    // TODO: Make it its own hook
     // Fetch general course data
     useEffect(() => {
         const fetchData = async () => {
@@ -70,6 +72,7 @@ export default function Learn() {
 
     const chapters = data.chapters.map((lesson: chapterProps) => {
         return <div
+            key={lesson.topic}
             className={"chapters__list--chapter" + (lesson.topic == chapter ? " chapters__list--chapter--active" : "")}
             onClick={goTo}
             data-chapter={lesson.topic}
@@ -97,10 +100,10 @@ export default function Learn() {
                     
                     <h2>Capítulos</h2>
                     <div className="chapters__list">
-                        {chapters.map((chapter) => (
-                          <>
-                              {chapter}
-                          </>
+                        {chapters.map((chapter, index) => (
+                          <div key={index}>
+                              { chapter }
+                          </div>
                         )) }
                     </div>
                 </section>

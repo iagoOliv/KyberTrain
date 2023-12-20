@@ -15,9 +15,9 @@ export default function Card({id, name, description, rating, isTrending, bannerI
     const stars = []
     
     for (let i = 0; i < Math.round(rating); i++) {
-        stars.push(<StarFill fill="#3b82f6" />)
+        stars.push(<StarFill key={i} fill="#3b82f6" />)
     } for (let i = stars.length; i < 5; i++) {
-        stars.push(<Star />)
+        stars.push(<Star key={i} />)
     }
 
     return (

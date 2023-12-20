@@ -1,10 +1,16 @@
 import "./Explore.scss";
-import placeholderCoursesData from "../../PlaceholderData";
 import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
 import Card from "../../Components/Card/Card";
+import useCourses from "../../Hooks/useCourses.tsx";
+import CourseCard from "../../Types/CourseCard.ts";
+
 
 function Explore() {
+    const coursesData = useCourses();
+
+
+    // @ts-ignore
     return (
         <>
             <Header/>
@@ -41,8 +47,9 @@ function Explore() {
                     <div className="container__main__content">
                         <div className="container__main__content__cards">
                             {
-                                placeholderCoursesData.map((course) => (
+                                coursesData.map((course: CourseCard) => (
                                     <Card
+                                        key={course.id}
                                         id={course.id}
                                         name={course.name}
                                         description={course.description}
@@ -62,8 +69,9 @@ function Explore() {
                     <div className="container__main__content">
                         <div className="container__main__content__cards">
                             {
-                                placeholderCoursesData.map((course) => (
+                                coursesData.map((course: CourseCard) => (
                                     <Card
+                                        key={course.id}
                                         id={course.id}
                                         name={course.name}
                                         description={course.description}

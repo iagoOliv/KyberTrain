@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from 'cors';
 import fs from 'fs';
 import { marked } from 'marked'
 
@@ -10,6 +11,8 @@ const __dirname = dirname(__filename);
 
 const port = process.env.PORT || 3000;
 const app = express();
+
+app.use(cors());
 
 // Get general course data
 app.get("/api/course/:id/", (_req, res) => {

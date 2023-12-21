@@ -1,7 +1,7 @@
 {
   "id":1,
   "name":"Engenharia Social",
-  "description":"Identificando e lidando com diversas Engenharia Sociais",
+  "description":"Identificando e lidando com diversas Engenharias Sociais",
   "rating":4.8,
   "isTrending":true,
   "release": "2023/11/26",
@@ -19,11 +19,7 @@
     },
     {
       "topic": 3,
-      "content": "Vishing"
-    },
-    {
-      "topic": 4,
-      "content": "O que fazer em caso de vazamento"
+      "content": "Prevenções"
     }
   ]
 }
